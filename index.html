@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Kayıp Kıta — Canavar avı kart oyunu</title>
+  <meta name="description" content="Kayıp Kıta: 2–4 kişilik canavar avı kart oyunu. Dört diyar, 110 kart, bir d20 ve dostlarının sabotajları. Büyük Üstat unvanına ilk sen ulaş." />
+  <meta property="og:title" content="Kayıp Kıta — Canavar avı kart oyunu" />
+  <meta property="og:description" content="Dört diyar, 110 kart, bir d20 ve dostlarının sabotajları." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://muustafakaan-dotcom.github.io/kayip-kita/" />
+  <meta property="og:image" content="https://muustafakaan-dotcom.github.io/kayip-kita/assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="626" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#16110d" />
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;0,800;1,400&family=Pirata+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="site.css" />
+</head>
+<body>
+  <header class="nav">
+    <a href="#" class="nav-logo" aria-label="Kayıp Kıta"><img src="assets/logo.png" alt="" width="44" height="42" /></a>
+    <nav>
+      <a href="#diyarlar">Diyarlar</a>
+      <a href="#nasil">Nasıl oynanır</a>
+      <a href="#kartlar">Kartlar</a>
+      <a href="#kutu">Kutuda</a>
+    </nav>
+    <a class="btn btn-small" href="oyna/">Tarayıcıda dene</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-in">
+      <img class="hero-logo" src="assets/logo.png" alt="Kayıp Kıta" width="300" height="289" />
+      <p class="kicker">2–4 oyuncu · 110 kart · 1 d20</p>
+      <h1>Canavarları avla.<br />Dostlarını sabote et.</h1>
+      <p class="lead">Kadim dünyanın dengesi bozuldu. Dört büyük diyarın canavarları uyanıyor. Büyük Üstat unvanına ilk ulaşan sen ol — ama dikkat et, en büyük tehlike bazen yanındaki rakiplerindir.</p>
+      <div class="cta">
+        <a class="btn" href="oyna/">Tarayıcıda dene</a>
+        <a class="btn btn-ghost" href="#video">Tanıtımı izle</a>
+      </div>
+    </div>
+    <div class="hero-fan" aria-hidden="true">
+      <img src="assets/cards-hd/f-skacis.webp" alt="" style="--x:-1.5;--r:-15deg;--y:22px;z-index:1" />
+      <img src="assets/cards-hd/w-volkanik-kilic.webp" alt="" style="--x:-0.5;--r:-5deg;--y:0px;z-index:2" />
+      <img src="assets/cards-hd/s-vudu.webp" alt="" style="--x:1.5;--r:15deg;--y:22px;z-index:3" />
+      <img src="assets/cards-hd/m-simsek-ejderhasi.webp" alt="" style="--x:0.5;--r:5deg;--y:-10px;z-index:4" />
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="sec sec-dark" id="video">
+    <div class="wrap">
+      <div class="video">
+        <video src="assets/video/promo.mp4" poster="assets/video/promo-poster.webp" controls playsinline preload="none" muted></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- PITCH -->
+  <section class="sec">
+    <div class="wrap pitch">
+      <div>
+        <p class="eyebrow">Oyun hakkında</p>
+        <h2>Kör saldırı, kapalı sabotaj, tek bir zar</h2>
+        <p>Her tur bir habitat ve bir canavar açılır. Savaşacak mısın, kaçacak mısın? Savaşırsan elinden iki silah seçersin — ama masada kapalı duran sabotaj kartının ne olduğunu bilmeden.</p>
+        <p>Blöf serbest: rakibin şartı tutmayan bir sabotajla seni korkutup en iyi silahlarını harcatabilir. Ya da gerçekten ölümcül bir darbe saklıyordur.</p>
+      </div>
+      <ul class="facts">
+        <li><b>10 → 30</b><span>Herkes 10. seviyede başlar, 30'a ilk ulaşan kazanır.</span></li>
+        <li><b>Elenme yok</b><span>Seviyesi biten "Yaralı" düşer, ilk zaferinde ayağa kalkar.</span></li>
+        <li><b>4 diyar</b><span>Doğru silahı doğru habitata sakla; uyum sana bonus kazandırır.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- REALMS -->
+  <section class="sec sec-dark" id="diyarlar">
+    <div class="wrap">
+      <p class="eyebrow">Dört diyar</p>
+      <h2>Her diyarın kendi canavarı, kendi silahı</h2>
+      <div class="realms" id="realms"></div>
+    </div>
+  </section>
+
+  <!-- CHARACTERS -->
+  <section class="sec">
+    <div class="wrap">
+      <p class="eyebrow">Maceracılar</p>
+      <h2>Her avcı, kendi cehenneminin efendisidir</h2>
+      <p class="sub">Dört farklı disiplinden gelen bu uzmanlar, Kayıp Kıta'nın ölümcül coğrafyasıyla savaşmak yerine onunla bütünleşmeyi seçti. Kendi diyarının canavarına karşı +1 güç; habitat, canavar ve karakter aynı diyardansa zaferde +2 level.</p>
+      <div class="chars" id="chars"></div>
+    </div>
+  </section>
+
+  <!-- HOW TO PLAY -->
+  <section class="sec sec-paper" id="nasil">
+    <div class="wrap">
+      <p class="eyebrow">Nasıl oynanır</p>
+      <h2>Bir tur, beş aşama</h2>
+      <ol class="steps">
+        <li>
+          <span class="n">1</span>
+          <h3>İz sür</h3>
+          <p>Bir habitat, sonra bir canavar açılır. Canavar kendi diyarındaysa <b>+3 güç</b> kazanır.</p>
+        </li>
+        <li>
+          <span class="n">2</span>
+          <h3>Savaş ya da kaç</h3>
+          <p>Kaçmak için d20 at: <b>11–20</b> kaçarsın ve bir Kader kartı çekersin, <b>1–10</b> köşeye sıkışır, savaşırsın.</p>
+        </li>
+        <li>
+          <span class="n">3</span>
+          <h3>Düello</h3>
+          <p>Canavar adına sağındaki oyuncu zar atar. Rakiplerden biri kapalı bir <b>sabotaj</b> bırakabilir. Sen kör saldırırsın: iki silah + zar.</p>
+        </li>
+        <li>
+          <span class="n">4</span>
+          <h3>Sonuç</h3>
+          <p>Sabotaj açılır. Kazanırsan canavarın gücü kadar <b>level atlarsın</b>, kaybedersen ceza puanı kadar düşersin.</p>
+        </li>
+        <li>
+          <span class="n">5</span>
+          <h3>Dinlen</h3>
+          <p>Savaştıysan elini 5 karta tamamla. Kaçtıysan eksik kartını tamamlayamazsın.</p>
+        </li>
+      </ol>
+      <div class="formula">
+        <div><span>Canavar</span><b>Güç + Ev sahibi bonusu + d20</b></div>
+        <div class="vs">VS</div>
+        <div><span>Maceracı</span><b>Silah 1 + Silah 2 + Karakter bonusu + d20</b></div>
+      </div>
+      <p class="note">Silah, kendi diyarının habitatında habitat bonusunu da ekler: Zıpkın suda ölümcüldür, ormanda sıradandır.</p>
+    </div>
+  </section>
+
+  <!-- CARDS -->
+  <section class="sec sec-dark" id="kartlar">
+    <div class="wrap">
+      <p class="eyebrow">Kartlar</p>
+      <h2>110 kart, dört diyar, tek bir kıta</h2>
+      <div class="filters" id="filters" role="tablist"></div>
+      <div class="gallery" id="gallery"></div>
+    </div>
+  </section>
+
+  <!-- BOX -->
+  <section class="sec" id="kutu">
+    <div class="wrap box">
+      <div class="box-art">
+        <img src="assets/backs/monster.webp" alt="Canavar destesi kart arkası" />
+        <img src="assets/backs/habitat.webp" alt="Habitat destesi kart arkası" />
+        <img src="assets/backs/attack.webp" alt="Saldırı destesi kart arkası" />
+        <img src="assets/backs/fate.webp" alt="Kader destesi kart arkası" />
+      </div>
+      <div>
+        <p class="eyebrow">Kutuda neler var</p>
+        <h2>Masaya yay, hemen başla</h2>
+        <ul class="contents">
+          <li><b>24</b> Canavar kartı</li>
+          <li><b>16</b> Habitat kartı</li>
+          <li><b>60</b> Saldırı kartı <small>(40 silah, 20 sabotaj)</small></li>
+          <li><b>10</b> Kader kartı</li>
+          <li><b>4</b> Maceracı karakter ve seviye kartı</li>
+          <li><b>1</b> d20 zar</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="sec sec-dark final">
+    <div class="wrap">
+      <img src="assets/logo.png" alt="" width="140" height="135" />
+      <h2>Avın başlamasına az kaldı</h2>
+      <p class="sub">Kayıp Kıta yakında kutu oyunu olarak masalarda. Beklerken telefonda ya da bilgisayarda üç rakibe karşı bir el oyna.</p>
+      <div class="cta">
+        <a class="btn" href="oyna/">Tarayıcıda dene</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <p>© 2026 Kayıp Kıta · Tüm hakları saklıdır.</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lb-close" aria-label="Kapat">×</button>
+    <img alt="" />
+    <p></p>
+  </div>
+
+  <script src="assets/cards.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>
