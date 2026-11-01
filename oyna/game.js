@@ -228,7 +228,7 @@
     realmNow = el;
     const layers = document.querySelectorAll('#arenaBg i');
     realmLayer = 1 - realmLayer;
-    if (el) layers[realmLayer].style.backgroundImage = `url('../assets/realms/${el}.webp')`;
+    if (el) layers[realmLayer].dataset.el = el;
     layers[realmLayer].classList.toggle('on', !!el);
     layers[1 - realmLayer].classList.remove('on');
   }

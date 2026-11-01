@@ -89,10 +89,16 @@ body { background: none; }
    GAME LAYOUT
    ============================================================ */
 .game { display: grid; grid-template-rows: auto minmax(0, 1fr) auto auto; grid-template-columns: minmax(0, 1fr); max-width: 620px; margin: 0 auto; }
-.arena-bg { position: fixed; inset: 0; z-index: -1; background: var(--night); }
-.arena-bg i { position: absolute; inset: -4%; background: center / cover no-repeat; opacity: 0; transition: opacity 1s ease; filter: saturate(1.05) brightness(0.55) blur(1px); }
+/* Background: soft coloured light per realm + film grain (no artwork, easier on the eyes) */
+.arena-bg { position: fixed; inset: 0; z-index: -1; background: radial-gradient(ellipse 70% 45% at 50% 32%, rgba(240, 164, 58, 0.1), transparent 70%), var(--night); }
+.arena-bg i { position: absolute; inset: 0; opacity: 0; transition: opacity 1.2s ease; }
 .arena-bg i.on { opacity: 1; }
-.arena-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 42%, rgba(15, 11, 8, 0.15), rgba(15, 11, 8, 0.86) 75%), linear-gradient(180deg, rgba(15, 11, 8, 0.85), transparent 20%, transparent 62%, rgba(15, 11, 8, 0.97) 82%); }
+.arena-bg i[data-el='orman'] { background: radial-gradient(ellipse 75% 48% at 50% 30%, rgba(70, 190, 105, 0.3), transparent 72%), radial-gradient(ellipse 60% 40% at 12% 85%, rgba(150, 200, 80, 0.12), transparent 70%), #0c120d; }
+.arena-bg i[data-el='su'] { background: radial-gradient(ellipse 75% 48% at 50% 28%, rgba(80, 180, 230, 0.3), transparent 72%), radial-gradient(ellipse 60% 40% at 88% 85%, rgba(40, 110, 170, 0.18), transparent 70%), #0a1016; }
+.arena-bg i[data-el='yer'] { background: radial-gradient(ellipse 75% 48% at 50% 34%, rgba(235, 110, 45, 0.28), transparent 72%), radial-gradient(ellipse 60% 40% at 50% 100%, rgba(200, 60, 30, 0.2), transparent 70%), #130c09; }
+.arena-bg i[data-el='gok'] { background: radial-gradient(ellipse 75% 48% at 50% 28%, rgba(130, 140, 255, 0.3), transparent 72%), radial-gradient(ellipse 60% 40% at 15% 15%, rgba(180, 120, 255, 0.14), transparent 70%), #0d0d17; }
+.arena-bg::before { content: ''; position: absolute; inset: 0; z-index: 1; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); opacity: 0.09; mix-blend-mode: overlay; pointer-events: none; }
+.arena-bg::after { content: ''; position: absolute; inset: 0; z-index: 2; background: radial-gradient(ellipse 95% 75% at 50% 40%, transparent 55%, rgba(8, 6, 4, 0.6)), linear-gradient(180deg, transparent 62%, rgba(15, 11, 8, 0.85) 85%); }
 
 /* ---------- HUD ---------- */
 .hud { padding: max(8px, env(safe-area-inset-top)) 10px 4px; display: flex; flex-direction: column; gap: 7px; }
