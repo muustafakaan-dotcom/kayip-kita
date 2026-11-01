@@ -83,7 +83,10 @@ body { background: none; }
 .seg button { flex: 1; min-height: 46px; border: 0; border-radius: 10px; background: none; font-weight: 800; font-size: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1.1; color: var(--muted); }
 .seg button small { font-weight: 600; font-size: 11.5px; opacity: 0.8; }
 .seg button.on { background: var(--paper); color: var(--ink); box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3); }
-.start-links { display: flex; justify-content: center; align-items: center; gap: 6px; color: var(--muted); margin-top: auto; }
+.start-links { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 2px; }
+.btn-outline { background: rgba(26, 19, 14, 0.72); color: var(--paper); border: 1px solid rgba(241, 230, 205, 0.28); backdrop-filter: blur(6px); font-size: 15px; text-decoration: none; transition: border-color 0.2s, background 0.2s, transform 0.12s; }
+.btn-outline:hover { border-color: var(--gold); background: rgba(38, 28, 21, 0.85); }
+.btn-outline svg { color: var(--gold); }
 
 /* ============================================================
    GAME LAYOUT
