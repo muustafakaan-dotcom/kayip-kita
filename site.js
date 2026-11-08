@@ -1,12 +1,14 @@
 (() => {
   const { cards, characters, elements } = window.KK;
   const img = (id) => `assets/cards/${id}.webp`;
-  const COLORS = { orman: 'var(--orman)', su: 'var(--su)', yer: 'var(--yer)', gok: 'var(--gok)' };
+  const COLORS = { orman: 'var(--orman)', su: 'var(--su)', yer: 'var(--yer)', gok: 'var(--gok)', golge: '#8a5fd6', col: '#e8761f' };
   const BLURB = {
     orman: 'Fısıldayan ağaçların arasında Kadim Ent ve Cerberus bekler.',
     su: 'Batık şehirlerin karanlığında Megalodon ve Katil Kraken dolaşır.',
     yer: 'Magma köprülerinin altında Şahmeran ve Zebani uyanır.',
     gok: 'Fırtınanın gözünde Kral Griffon ve Şimşek Ejderhası süzülür.',
+    golge: 'Kan Şatosu\'nun gölgesinde Kont Drakula ve Karabasan pusudadır.',
+    col: 'Serap Vahası\'nın ötesinde Ölüm Solucanı ve Ateş İfriti yükselir.',
   };
 
   // Realms

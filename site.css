@@ -89,7 +89,7 @@ p { margin: 0 0 14px; }
 @media (max-width: 860px) { .pitch { grid-template-columns: 1fr; gap: 30px; } }
 
 /* Realms */
-.realms { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 34px; }
+.realms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
 .realm { position: relative; border-radius: var(--r); overflow: hidden; min-height: 420px; display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; color: #fff4e0; border-top: 6px solid var(--c); isolation: isolate; }
 .realm::before { content: ''; position: absolute; inset: 0; background: var(--img) center 20% / cover; z-index: -2; transition: transform 0.6s; }
 .realm::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(10, 8, 6, 0.96) 18%, rgba(10, 8, 6, 0.1) 70%); z-index: -1; }
@@ -102,7 +102,7 @@ p { margin: 0 0 14px; }
 @media (max-width: 560px) { .realms { grid-template-columns: 1fr; } .realm { min-height: 340px; } }
 
 /* Characters */
-.chars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 34px; }
+.chars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
 .char { background: #fbf4e3; border: 2px solid var(--ink); border-radius: var(--r); overflow: hidden; box-shadow: 5px 5px 0 var(--ink); }
 .char img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-bottom: 6px solid var(--c); }
 .char div { padding: 14px 16px 18px; }
